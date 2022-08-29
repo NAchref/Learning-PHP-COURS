@@ -6,21 +6,6 @@
 	
 	<body>
 		
-		<!-- 
-			You embed PHP code between tags
-			echo puts what ever is between quotes in the browser
-			
-			php code doesn't show if a user tries to view source
-			
-			A semicolon has to finish every php statement
-			
-			Single quotes : Print what is between them and ignore 
-				escape sequences except for \' and \\
-			
-			Double quotes : Print many escape sequences, the values
-				for variables, and more
-		-->
-		
 		<?php
 		
 			/* Multiline
