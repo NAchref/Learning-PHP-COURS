@@ -173,4 +173,243 @@
 			}
 			
 			echo "</br></br>";
-?>		
+		
+		
+		
+		
+		
+			/* 
+				elseif is used when you have more conditions to check
+			*/ 
+		
+			$numOfOranges = 4;
+			$numOfBananas = 36;
+			
+			if(($numOfOranges > 25) && ($numOfBananas > 30)){
+			
+				echo '25% Discount';
+			
+			} elseif (($numOfOranges > 30) || ($numOfBananas > 35)){
+			
+				echo '15% Discount';
+			
+			} elseif (!(($numOfOranges < 5)) || (!($numOfBananas < 5))){
+			
+				echo '5% Discount';
+			
+			} else {
+			
+				echo 'No Discount For You';
+			
+			}
+			
+			echo "</br></br>";
+			
+			// The ternary operator assigns one or another value
+			// depending on the condition 
+			// condition ? value if true : value if false
+			
+			$biggestNum = (15 > 10) ? 15 : 10;
+			
+			echo 'Biggest Number is ' . $biggestNum;
+			
+			echo "</br></br>";
+			
+			// Switch provides different actions depending upon values
+			
+			switch($usersName) {
+			
+				case "Derek" :
+					echo "Hello Derek";
+					break;
+					
+				case "Sally" : 
+					echo "Hello Sally";
+					break;
+					
+				default :
+					echo "Hello Valued Customer";
+					break;			
+			}
+			
+			echo "</br></br>";
+			
+			// The while loop performs actions until a condition is met
+			
+			$num = 0;
+			
+			while($num < 20){
+			
+				echo ++$num . ', ';
+			
+			}
+			
+			echo "</br></br>";
+		
+		
+			
+			// The for loop performs actions until a condition is met
+			// like the while, but it a compact way
+			for($num = 1; $num <= 20; $num++){
+			
+				echo $num;
+				
+				if($num != 20){
+					echo ', ';
+				} else {
+					break; // or exit() to leave the whole script
+				}
+			
+			}
+			
+			echo "</br></br>";
+		
+		
+		
+			
+			// An array can store multiple values
+			
+			$bestFriends = array('Joy', 'Willow', 'Ivy');
+			
+			// You can access an item by index starting with 0
+			
+			echo 'My wife ' . $bestFriends[0];
+			
+			echo "</br></br>";
+		
+		
+			
+		
+			// You can add an item by storing in a unused index 
+			
+			$bestFriends[4] = 'Steve';
+			
+			echo 'My friend ' . $bestFriends[4];
+			
+			echo "</br></br>";
+			
+		
+		
+		
+			// You could cycle through the array with for or foreach
+			
+			foreach($bestFriends as $friend){
+				
+				echo $friend . ', ';
+			
+			}
+			echo "</br></br>";
+		
+		
+		
+			
+			// You can create key value pairs in arrays
+			$customer = array('Name'=>$usersName, 'Street'=>$streetAddress, 'City'=>$cityAddress);
+			
+			foreach($customer as $key => $value){
+			
+				echo $key . ' : ' . $value . '</br>';
+			
+			}
+			echo "</br></br>";
+		
+		
+		
+		
+			
+			// You can combine arrays with +
+			$bestFriends = $bestFriends + $customer;
+			
+			foreach($bestFriends as $friend){
+				
+				echo $friend . ', ';
+			
+			}
+		
+		
+			
+			// Other common array operators
+			// == : Returns true of false if arrays are equal
+			// != : Returns if not equal
+			// === : Returns if the same items, same order and data type
+			
+			echo "</br></br>";
+			
+			// Multidimensional arrays are arrays in arrays
+			
+			$customers = array(array('Derek', '123 Main', '15212'),
+							   array('Sue', '124 Main', '15222'),
+							   array('Bob', '125 Main', '15212'));
+							   
+			for($row = 0; $row < 3; $row++){
+			
+				for($col = 0; $col < 3; $col++){
+				
+					echo $customers[$row][$col] . ', ';
+				
+				}
+				echo '</br>';
+			
+			}
+			
+			// Common Array Functions
+			// sort($yourArray) : Sorts in ascending alphabetical order or 
+			// if you add , SORT_NUMERIC or , SORT_STRING
+			// asort($yourArray) : sorts arrays with keys
+			// ksort($yourArray) : sorts by the key
+			// Put a r infront of the above to sort in reverse order
+			
+			echo "</br></br>";
+			
+			// Strings store a series of characters
+			
+			$randString = "         Random String       ";
+			
+			// You can trim white space with ltrim, rtrim, or trim
+			
+			echo strlen($randString) . "</br>";
+			echo strlen(ltrim($randString)) . "</br>";
+			echo strlen(rtrim($randString)) . "</br>";
+			echo strlen(trim($randString)) . "</br>";
+			
+			echo "</br></br>";
+			
+			// printf allows you to print formatted Strings to the screen
+			
+			echo "The randomString is $randString </br>";
+			
+			printf ("The randomString is %s </br>", $randString);
+			
+			// Coversion codes are useful with decimals
+			
+			$decimalNum = 2.3456;
+			
+			printf ("decimal num = %.2f </br>", $decimalNum);
+			
+			// Other conversion codes
+			// b : integer to binary
+			// c : integer to character
+			// d : integer to decimal
+			// f : double to float
+			// o : integer to octal
+			// s : string to string
+			// x : integer to hexadecimal
+			
+			printf ("10 to binary %b </br>", 10);
+			
+			echo "</br></br>";
+			
+			// String case functions
+			
+			echo strtoupper($randString) . "</br>";
+			echo strtolower($randString) . "</br>";
+			echo ucfirst($randString) . "</br>";
+			
+			echo "</br></br>";
+			
+			// Turning strings into arrays and vice versa
+			$arrayForString = explode(' ', $randString, 2);
+			
+			$stringToArray = implode(' ', $arrayForString);
+			
+			echo "</br></br>";
