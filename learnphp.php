@@ -130,5 +130,47 @@
 			$randNum = 5;
 			echo $randNum += 5;
 			echo "</br></br>";
+	
 		
+		
+		
+			// You can increment and decrement with this shortcut
+			
+			echo "++randNum = " . ++$randNum . "</br>";
+			echo "randNum++ = " . $randNum++;
+			
+			echo "</br></br>";
+			
+		
+		
+		
+			/* 
+				The reference operator (ampersan / &) can create a
+				reference to a variable so if one changes so does the
+				other
+			*/
+			$refToNum = &$randNum;
+			$randNum = 100;
+			echo '$refToNum = ' . $refToNum;
+			
+			echo "</br></br>";
+			
+		
+		
+		
+			// Comparison Operators : ==, !=, <, >, <=, >=
+			// === (Equal & Same Type), !== (Not Equal or Same Type)
+			// An if block will perform one action or another depending
+			// on conditions
+			if(5 == 10){
+			
+				echo '5 = 10';
+			
+			} else {
+			
+				echo '5 != 10';
+			
+			}
+			
+			echo "</br></br>";
 ?>		
