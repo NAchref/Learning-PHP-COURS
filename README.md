@@ -33,3 +33,13 @@ What's new in PHP 7
   * PHP 7 has improved Error Handling
   * PHP 7 supports stricter Type Declarations for function arguments
   * PHP 7 supports new operators (like the spaceship operator: <=>)
+  
+  
+  
+Set Up PHP on Your Own PC
+However, if your server does not support PHP, you must:
+
+ * install a web server
+ * install PHP
+ * install a database, such as MySQL
+ * The official PHP website (PHP.net) has installation instructions for PHP: http://php.net/manual/en/install.php
