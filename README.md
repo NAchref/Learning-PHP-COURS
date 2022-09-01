@@ -49,7 +49,7 @@ A PHP script is executed on the server, and the plain HTML result is sent back t
 
 
 
-##Basic PHP Syntax
+#Basic PHP Syntax
 
 A PHP script can be placed anywhere in the document.
 
